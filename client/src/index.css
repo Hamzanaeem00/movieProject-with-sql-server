@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+* {
+    margin: 2px;
+    padding: 2px;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: aqua;
+}
+
+.btn {
+    display: inline-block;
+    padding: .5rem 1rem;
+    background-color: aqua;
+    border-radius: 2rem;
+    color: #1e1f26;
+    transition: .3s;
+}
+
+.btn:hover {
+    background-color: rgb(84, 151, 151);
+
+}
+
+.btn-l {
+    width: 100%;
+    text-align: center;
+}
+
+body {
+    background-color: #1e1f26;
+    display: grid;
+    grid-template-columns: 1000px;
+    justify-content: space-evenly;
+}
+
+/* top bar */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+}
+
+.left-content,
+.right-content {
+    display: flex;
+    align-items: center;
+
+}
+
+.title {
+    margin-right: 3rem;
+    color: blue;
+}
+
+.navigation {
+    display: flex;
+    list-style-type: none;
+}
+
+.navigation li {
+    margin-right: 1rem;
+}
+
+.navigation li a:hover {
+    color: blue;
+}
+
+.active {
+    color: blue;
+}
+
+.filters,
+.cart,
+.help,
+.menu {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.filters,
+.cart,
+.help {
+    margin-right: 1rem;
+}
+
+.menu {
+    margin-left: 2rem;
+}
+
+
+.profile-img-box {
+    position: relative;
+    height: 35px;
+    width: 35px;
+    overflow: hidden;
+
+}
+.profile-img-box > img{
+    width: 35px;
+    height: 35px;
+    border-radius: 4rem
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.filters,
+.cart,
+.help,
+.menu {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.main-container {
+    color: aqua;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 2rem;
+}
+
+/* sidebar */
+.sidebar {
+    background: linear-gradient(45deg, rgba(37, 51, 57, 0.05), rgba(98, 201, 232, 0.15));
+    backdrop-filter: blur(5px);
+    height: fit-content;
+    border-radius: 1rem;
+    padding: 2rem 2.5rem;
+    width: 240px;
+}
+
+.sidebar-groups {
+    margin-bottom: 1rem;
+}
+
+.sg-title {
+    margin-bottom: 10px;
+    color: white;
+}
+
+input {
+    margin-bottom: 7px;
+}
+
+input[type=radio]:checked {
+    accent-color: aqua;
+}
+
+
+label {
+    margin-left: .5rem;
+    color: aqua;
+}
+
+/* Movie Container */
+.upcoming-img-box {
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    width: 700px;
+    height: 340px;
+    
+
+}
+
+img {
+    width: 650px;
+    height: 300px;
+    border-radius: 1rem;
+}
+
+.upcoming-title {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    color: aqua;
+    background-color: #1e1f26;
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    border: 1px solid aqua;
+    font-weight: 500;
+}
+
+.buttons {
+    position: relative;
+    bottom: 2rem;
+    left: 2rem;
+    margin-left: 5px;
+    margin-top: 270px;
+}
+
+.btn-alt {
+    background-color: #1e1f26;
+    color: aqua;
+    border: 1px solid aqua;
+    margin-left: 1rem;
+
+}
+
+.btn-alt:hover {
+    color: #1e1f26;
+    background-color: aqua;
+}
+
+/* current movies */
+/* .movie-container{
+    padding-bottom: 2rem;
+
+} */
+/* .current-movies {
+    display: inline-flex;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100vw;
+
+} */
+
+.current-movie {
+    background: linear-gradient(45deg, rgba(37, 51, 57, 0.05), rgba(98, 201, 232, 0.15));
+    padding: 1rem;
+    border-radius: .5rem;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    overflow: hidden;
+}
+
+.cm-img-box {
+    position: relative;
+    height: 319px;
+    width: 217px;
+    margin-bottom: .5rem;
+    border-top-right-radius:1rem ;
+    border-top-left-radius:1rem ;
+    border-bottom-left-radius:1rem ;
+    border-bottom-right-radius:1rem ;
+    margin-top: 340px;
+    margin-left: 19px;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+.cm-img-box:hover{
+    transform: scale(1.2, 1.2);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    transition: 0.6s;
+}
+
+.movie-title {
+    color: white;
+    margin-bottom: .2rem;
+}
+
+.booking {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.screen-name {
+    color: rgb(142, 136, 136);
+    margin-bottom: 0;
+
+}
