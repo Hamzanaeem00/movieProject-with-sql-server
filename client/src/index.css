@@ -70,6 +70,9 @@ body {
 .navigation li a:hover {
     color: blue;
 }
+.link:hover {
+    color: blue;
+}
 
 .active {
     color: blue;
@@ -275,4 +278,12 @@ img {
     color: rgb(142, 136, 136);
     margin-bottom: 0;
 
+}
+
+.carousel-inner{
+    height: 100% !important;
+}
+
+.carousel-indicators{
+    margin-bottom:  0rem !important;
 }

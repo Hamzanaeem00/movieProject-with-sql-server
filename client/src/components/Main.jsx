@@ -7,11 +7,15 @@ import movie1 from '../assets/css/images/movie1.jpg'
 import movie2 from '../assets/css/images/movie2.jpg'
 import movie3 from '../assets/css/images/movie3.jpg'
 import { Link } from 'react-router-dom';
+import Carousel from 'react-bootstrap/Carousel';
 
 
 const Main = () => {
 
-  const [isActive , setIsActive] = useState('active')
+  const [index, setIndex] = useState(0);
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
 
 
   return (
@@ -20,31 +24,23 @@ const Main = () => {
     <Sidebar />
  </div>
     <div className="movie_container">
-      <div className="upcoming-img-box">
-        <img src={menu} alt="" className='mx-3 mt-3' />
-       {/* <div id="carouselExampleIndicators" className="carousel slide upcoming-img-box " data-ride="carousel">
-        <div className="carousel-inner h-100">
-          <div className ={`carousel-item h-100 ${isActive}`} >
-            <img className="d-block w-100" src="https://w0.peakpx.com/wallpaper/593/742/HD-wallpaper-avatar-2-the-way-of-water-banner.jpg" alt="First slide" />
-          </div>
-          <div className={`carousel-item h-100 ${isActive}`} >
-            <img className="d-block w-100" src="https://www.disneyalwayswithus.com/wp-content/uploads/2017/06/spiderman_homecoming_ver7_xlg-2.jpg" alt="Second slide" />
-          </div>
-          <div className={`carousel-item h-100 ${isActive}`}>
-            <img className="d-block w-100" src="https://cdn.europosters.eu/image/hp/55417.jpg" alt="Third slide" />
-          </div>
-        </div>
-        <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true" />
-          <span className="sr-only">Previous</span>
-        </a>
-        <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true" />
-          <span className="sr-only"  onClick={()=> setIsActive}>Next</span>
-        </a>
-      </div> */}
+      <div className="upcoming-img-box ">
+        {/* <img src={menu} alt="" className='mx-3 mt-3' /> */}
+        <Carousel className='h-100 my-2' activeIndex={index}
+         onSelect={handleSelect}
+         >
+      <Carousel.Item className='my-0' >
+          <img src={menu} alt=""  />
+      </Carousel.Item>
+      <Carousel.Item>
+         <img src={menu1} alt="" />
+      </Carousel.Item>
+      <Carousel.Item>
+         <img src={menu2} alt="" />
+s      </Carousel.Item>
+    </Carousel>
         <p className="upcoming-title">Upcoming Movie</p>
-        <div className="buttons">
+        <div className="mx-4 position-relative" style={{top:'-92px'}} >
           <a className="btn">Book Now</a>
           <a className="btn-alt btn">Play Trailer</a>
         </div>

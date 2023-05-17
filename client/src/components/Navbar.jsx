@@ -10,12 +10,12 @@ const Navbar = () => {
     <selection className="top-bar">
     <div className="left-content">
       <h2 className="title">Movie Light</h2>
-      <ul className="navigation">
-        <li><a href="#">Home</a></li>
-        <li><a className="active" href="#">Movies</a></li>
-        <li><a href="#">Theaters</a></li>
-        <li><a href="#">News</a></li>
-        <Link to='/form'> Form
+      <ul className="navigation my-2">
+        <Link className='link mx-2' to='/'> Home </Link>
+        <Link className="active mx-2" to='/'>Movies</Link>
+        <Link  className='link mx-2'>Theaters</Link>
+        <Link  className='link mx-2'>News</Link>
+        <Link className='link mx-2' to='/form'> Form
         </Link>
       </ul>
     </div>
